@@ -1,6 +1,10 @@
 {
   "dependencies": {
-    "express": "*"
+    "@azure/identity": "^4.10.0",
+    "@azure/storage-blob": "^12.27.0",
+    "dotenv": "^16.5.0",
+    "express": "*",
+    "multer": "^2.0.0"
   },
   "scripts": {
     "start": "node app.js"
@@ -8,8 +12,7 @@
   "name": "basic-nodejs",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
-  "author": "Aditya",
+  "author": "Abhishek",
   "license": "MIT",
   "description": "NodeJS Project with Expres FrameWork and Running in Docker Container"
 }

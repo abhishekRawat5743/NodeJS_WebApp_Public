@@ -2,5 +2,5 @@
 FROM node:alpine
 COPY ./ ./
 RUN npm install
-EXPOSE 8081
+EXPOSE 3000
 CMD ["npm", "start"]

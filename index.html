@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title> DevOps HomePage </title>
+    <title> Azure Web App </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
   </head>
@@ -8,7 +8,7 @@
     <div style="margin:6px;">
       <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
-          <a class="navbar-brand" href="/"> DevOps Shack Youtube </a>
+          <a class="navbar-brand" href="/"> Abhishek Rawat </a>
           <ul class="nav navbar-nav">
             <li class="active">
               <a href="/"> Home </a>
@@ -20,10 +20,15 @@
         </div>
       </nav>
       <div class="jumbotron"  style="padding:40px;">
-        <h1> Hello From  <span class="text-primary"> DevOps </span><span class="text-danger"> Shack </span></h1>
-        <p> Subscribe to Channel for  <span class="bg-info"> More </span> & Interesting <span class="bg-success"> DevOps Tutorials </span></p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">What's New</a></p>
+        <h1> Hello From  <span class="text-primary"> Abhishek </span><span class="text-danger"> Rawat </span></h1>
+        <p> Learning  <span class="bg-info"> Azure </span> is <span class="bg-success"> Fun & Interesting!! </span></p>
       </div>
+
+      <h2>Upload Image to Azure Blob Storage</h2>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" />
+        <button type="submit">Upload</button>
+      </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
