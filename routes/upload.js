@@ -1,9 +1,10 @@
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
+const os = require("os");
 const { uploadImageToBlob } = require("../services/blobStorageService");
 
-const upload = multer({ dest: "uploads/" });
+const upload = multer({ dest: path.join(os.tmpdir(), "uploads") });
 const router = express.Router();
 
 router.post("/", upload.single("image"), async (req, res) => {
@@ -16,8 +17,8 @@ router.post("/", upload.single("image"), async (req, res) => {
       `<p>Uploaded successfully: <a href="${blobUrl}" target="_blank">${blobUrl}</a></p>`
     );
   } catch (err) {
-    console.error(err);
-    res.status(500).send("Error uploading image");
+    console.error("Upload failed:", err);
+    res.status(500).send(`Upload failed: ${err.message}`);
   }
 });
 
