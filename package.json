@@ -12,7 +12,7 @@
   "scripts": {
     "start": "node app.js"
   },
-  "name": "basic-nodejs",
+  "name": "azure-web-app",
   "version": "1.0.0",
   "main": "app.js",
   "author": "Abhishek",
