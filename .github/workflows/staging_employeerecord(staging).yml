@@ -1,12 +1,12 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - employeeRecord
+name: Build and deploy Node.js app to Azure Web App - employeerecord
 
 on:
   push:
     branches:
-      - main
+      - staging
   workflow_dispatch:
 
 jobs:
@@ -58,14 +58,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DC712152966C4E7EADC3DE61C79E1770 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_06EF57937E8C4531B4212C14E4630C69 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_00D0F692DCF8403D9F0ED9D860410E5E }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_726EDD11846D4E7DA25D6E7D54C41464 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F2BC193E6D174BCF850BC1507B8121E1 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_783BF75CFDD84B75B724A1EBCA539444 }}
 
       - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: "employeeRecord"
-          slot-name: "Production"
+          app-name: "employeerecord"
+          slot-name: "staging"
           package: .

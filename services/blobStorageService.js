@@ -4,6 +4,7 @@ require("dotenv").config();
 
 const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
 const containerName = process.env.AZURE_STORAGE_CONTAINER_NAME;
+const dbConnectionString = process.env.DB_CONNECTION_STRING;
 
 if (!connectionString) {
   throw new Error("AZURE_STORAGE_CONNECTION_STRING is not set.");
